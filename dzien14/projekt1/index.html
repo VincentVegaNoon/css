@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .article {
+            width: 70%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .article.blur {
+            filter: blur(2px);
+        }
+
+        img {
+            padding: 50px 0;
+            width: 100%;
+        }
+
+        .modal-wrap {
+            display: none;
+        }
+
+        .modal-wrap.active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+
+        .modal-wrap.active .modal {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 70%;
+            border: 2px solid black;
+            /* background-color: black; */
+        }
+
+        @media (max-width: 800px) {
+            .modal {
+                width: 90%;
+                height: 90%;
+            }
+        }
+
+        .modal .top {
+            flex-basis: 15%;
+            background-color: cadetblue;
+        }
+
+        .modal .middle {
+            flex-grow: 1;
+            background-color: #ccc;
+        }
+
+        .modal .bottom {
+            flex-basis: 15%;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="article">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam et illo quos. Nam temporibus aliquam
+            reprehenderit, corrupti nobis quod delectus similique tempora. Necessitatibus iure vero ducimus fugit
+            provident, quidem eos.</p>
+        <button>Kup teraz</button>
+        <img src="image640.jpg" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ea tempora dolore eaque, reiciendis eveniet
+            dolores iste accusantium magnam! Quae, maxime minima. Aspernatur ex possimus maiores sapiente officiis,
+            earum molestiae.</p>
+    </section>
+    <section class="modal-wrap">
+    <div class="modal">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+        <span class="hide">X</span>
+    </div>
+    </section>
+    <script src=""></script>
+    
+    <script>
+        constbtnModal = document.querySelector('.article button');
+        btnModal.addEventListener("click", function(){
+            document.querySelector('modal-wrap').classList.add('active');
+            document.querySelector('modal-wrap').classList.add('blur');
+        })
+    </script>
+</body>
+
+</html>

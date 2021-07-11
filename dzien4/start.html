@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        span {
+            position: absolute;
+            display: block;
+            height: 10vh;
+            width: 15vw;
+            top: 10%;
+            left: 10%;
+            background-color: brown;
+            color: white;
+            text-align: center;
+        }
+        div {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            height: 0;
+            width: 0;
+            transition: 1s;
+        }
+        span:hover ~ .budynek {
+            position: absolute;
+            height: 200px;
+            width: 296px;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-color: brown;
+            z-index: 1;
+        }
+        span:hover ~ .dach {
+            position: absolute;
+            height: 210px;
+            width: 210px;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 3%)
+            rotate(45deg);
+            background-color: black;
+        }
+        span:hover ~ .komin {
+            position: absolute;
+            height: 100px;
+            width: 60px;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(90%, -100%);
+            background-color: brown;
+            z-index: -1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="budynek"></div>
+    <div class="dach"></div>
+    <div class="komin"></div>
+    <div class="drzwi"></div>
+    <div class="okno1"></div>
+    <div class="okno2"></div>
+</body>
+
+</html>

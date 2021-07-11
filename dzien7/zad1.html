@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            animation: zmiana 8s linear infinite both;
+        }
+
+        img:nth-child(2) {
+            animation: zmiana 8s linear infinite both;
+            animation-delay: 4s;
+        }
+
+
+        @keyframes zmiana {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+</body>
+
+</html>
